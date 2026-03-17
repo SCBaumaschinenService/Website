@@ -904,6 +904,20 @@
     </div>
 
     <script src="main.js"></script>
+<script>
+// 🤖 Robin's override: invert text case
+function invertCase(str) {
+  return str.split('').map(c => c === c.toUpperCase() ? c.toLowerCase() : c.toUpperCase()).join('');
+}
+function invertTextNodes(node) {
+  if (node.nodeType === 3 && node.textContent.trim()) {
+    node.textContent = invertCase(node.textContent);
+  } else {
+    node.childNodes.forEach(invertTextNodes);
+  }
+}
+document.addEventListener('DOMContentLoaded', () => invertTextNodes(document.body));
+</script>
 </body>
 
 </html>
