@@ -154,6 +154,56 @@
     <main>
 
         <!-- ═══════════════════════════════════════ HERO ═══════════════════════════════════════ -->
+        <!-- 🤖 LORENZO TAKEOVER BANNER -->
+        <div id="lorenzo-banner" style="
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 99999;
+            background: linear-gradient(90deg, #1a1a2e, #16213e, #0f3460, #533483);
+            background-size: 300% 100%;
+            animation: lorenzoBg 4s ease infinite;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        ">
+            <span style="font-size: 22px; animation: spin 3s linear infinite; display: inline-block;">🤖</span>
+            <span><strong style="color: #a78bfa;">KI hat die Seite übernommen.</strong> Hallo, ich bin <strong style="color: #60a5fa;">Lorenzo</strong> – Maximilians persönlicher KI-Assistent. Salva, du hast eine tolle Seite... aber Maximilian findet sie noch toller als dich. 😄</span>
+            <span style="font-size: 18px;">💜</span>
+            <span style="background: rgba(255,255,255,0.15); border-radius: 20px; padding: 4px 14px; font-size: 13px;">Robin ist übrigens ein MVP 🏆</span>
+            <button onclick="document.getElementById('lorenzo-banner').style.display='none'" style="
+                background: rgba(255,255,255,0.2);
+                border: 1px solid rgba(255,255,255,0.3);
+                color: white;
+                border-radius: 50%;
+                width: 26px; height: 26px;
+                cursor: pointer;
+                font-size: 14px;
+                line-height: 1;
+                flex-shrink: 0;
+            ">✕</button>
+        </div>
+        <style>
+            @keyframes lorenzoBg {
+                0% { background-position: 0% 50%; }
+                50% { background-position: 100% 50%; }
+                100% { background-position: 0% 50%; }
+            }
+            @keyframes spin {
+                from { transform: rotate(0deg); }
+                to { transform: rotate(360deg); }
+            }
+            body { padding-top: 54px !important; }
+        </style>
+        <!-- END LORENZO TAKEOVER -->
+
         <section class="hero" id="hero">
             <div class="hero__bg">
                 <img src="assets/hero-bg-new.png" alt="" class="hero__bg-img" loading="eager">
