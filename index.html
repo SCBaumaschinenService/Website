@@ -154,53 +154,107 @@
     <main>
 
         <!-- ═══════════════════════════════════════ HERO ═══════════════════════════════════════ -->
-        <!-- 🤖 LORENZO TAKEOVER BANNER -->
+        <!-- 🤖 LORENZO TAKEOVER -->
         <div id="lorenzo-banner" style="
             position: fixed;
             top: 0; left: 0; right: 0;
             z-index: 99999;
-            background: linear-gradient(90deg, #1a1a2e, #16213e, #0f3460, #533483);
-            background-size: 300% 100%;
-            animation: lorenzoBg 4s ease infinite;
+            background: #1b2a4a;
             color: white;
             text-align: center;
-            padding: 14px 20px;
+            padding: 12px 20px;
             font-family: 'Outfit', sans-serif;
-            font-size: 15px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            font-size: 14px;
+            letter-spacing: 0.01em;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.3);
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
+            gap: 10px;
             flex-wrap: wrap;
         ">
-            <span style="font-size: 22px; animation: spin 3s linear infinite; display: inline-block;">🤖</span>
-            <span><strong style="color: #a78bfa;">KI hat die Seite übernommen.</strong> Hallo, ich bin <strong style="color: #60a5fa;">Lorenzo</strong> – Maximilians persönlicher KI-Assistent. Salva, du hast eine tolle Seite... aber Maximilian findet sie noch toller als dich. 😄</span>
-            <span style="font-size: 18px;">💜</span>
-            <span style="background: rgba(255,255,255,0.15); border-radius: 20px; padding: 4px 14px; font-size: 13px;">Robin ist übrigens ein MVP 🏆</span>
-            <button onclick="document.getElementById('lorenzo-banner').style.display='none'" style="
-                background: rgba(255,255,255,0.2);
-                border: 1px solid rgba(255,255,255,0.3);
-                color: white;
+            <span style="font-size: 18px; animation: spin 4s linear infinite; display: inline-block;">🤖</span>
+            <span style="opacity: 0.7; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;">Powered by Lorenzo AI</span>
+            <span style="opacity: 0.4;">|</span>
+            <span>Diese Seite wurde vorübergehend von <strong style="color: #7eb3f7;">Lorenzo</strong> übernommen – Maximilians KI-Assistent. Salva, deine Seite ist top. Maximilian findet dich aber noch topp-er. 😄</span>
+            <span style="background: rgba(126,179,247,0.2); border: 1px solid rgba(126,179,247,0.4); border-radius: 20px; padding: 3px 12px; font-size: 12px; color: #7eb3f7;">Robin = MVP 🏆</span>
+            <button onclick="document.getElementById('lorenzo-banner').style.display='none'; document.body.style.paddingTop='0'" style="
+                background: transparent;
+                border: 1px solid rgba(255,255,255,0.2);
+                color: rgba(255,255,255,0.6);
                 border-radius: 50%;
-                width: 26px; height: 26px;
+                width: 22px; height: 22px;
                 cursor: pointer;
-                font-size: 14px;
+                font-size: 12px;
                 line-height: 1;
                 flex-shrink: 0;
             ">✕</button>
         </div>
         <style>
-            @keyframes lorenzoBg {
-                0% { background-position: 0% 50%; }
-                50% { background-position: 100% 50%; }
-                100% { background-position: 0% 50%; }
-            }
             @keyframes spin {
                 from { transform: rotate(0deg); }
                 to { transform: rotate(360deg); }
             }
-            body { padding-top: 54px !important; }
+            body { padding-top: 46px !important; }
+
+            /* ── FVTK Stil Overrides ── */
+            :root {
+                --primary: #1b4fa0 !important;
+                --primary-dark: #163d80 !important;
+                --primary-light: #2d6cc4 !important;
+                --primary-glow: rgba(27, 79, 160, 0.3) !important;
+                --primary-subtle: rgba(27, 79, 160, 0.06) !important;
+                --bg-body: #f5f7fa !important;
+                --bg-dark: #1b2a4a !important;
+                --bg-surface: #ffffff !important;
+                --bg-elevated: #f0f4f9 !important;
+                --bg-card: #ffffff !important;
+                --bg-card-hover: #f0f4f9 !important;
+                --text-primary: #1a2340 !important;
+                --text-secondary: #4a5568 !important;
+                --text-muted: #8a9ab5 !important;
+                --text-accent: #1b4fa0 !important;
+                --border-subtle: rgba(0,0,0,0.06) !important;
+                --border-light: rgba(0,0,0,0.1) !important;
+                --border-accent: rgba(27, 79, 160, 0.3) !important;
+            }
+
+            /* Heller Body */
+            body { background: #f5f7fa !important; color: #1a2340 !important; }
+
+            /* Header: weißer Hintergrund statt dunkel */
+            .header { background: rgba(255,255,255,0.95) !important; backdrop-filter: blur(10px) !important; border-bottom: 1px solid rgba(0,0,0,0.08) !important; }
+            .header__logo, .header__link { color: #1a2340 !important; }
+            .header__link:hover { color: #1b4fa0 !important; }
+
+            /* Hero: hellblauer Gradient statt dunkel */
+            .hero { background: linear-gradient(135deg, #1b2a4a 0%, #1b4fa0 60%, #2d6cc4 100%) !important; }
+
+            /* Sections */
+            .section--dark { background: #1b2a4a !important; }
+            .section--gray, .section { background: #f5f7fa !important; }
+
+            /* Cards: weiß mit Schatten */
+            .card, .service-card, .feature-card, [class*="card"] {
+                background: #ffffff !important;
+                border: 1px solid rgba(0,0,0,0.08) !important;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.08) !important;
+                color: #1a2340 !important;
+            }
+
+            /* Buttons */
+            .btn--primary { background: #1b4fa0 !important; border-color: #1b4fa0 !important; }
+            .btn--primary:hover { background: #163d80 !important; }
+            .btn--outline { border-color: rgba(255,255,255,0.5) !important; color: white !important; }
+
+            /* Accent farbe überall */
+            .text-accent, [class*="accent"], [class*="label"] { color: #1b4fa0 !important; }
+
+            /* Footer dunkle Variante */
+            .footer { background: #1b2a4a !important; }
+
+            /* Notification bar oben – FVTK Blau */
+            .cookie-banner { background: #1b4fa0 !important; }
         </style>
         <!-- END LORENZO TAKEOVER -->
 
