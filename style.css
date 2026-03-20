@@ -243,9 +243,9 @@ a:hover {
 }
 
 .btn--whatsapp {
-    background: #25D366;
+    background: var(--primary);
     color: white;
-    border-color: #25D366;
+    border-color: var(--primary);
     gap: 12px;
 }
 
@@ -255,8 +255,8 @@ a:hover {
 }
 
 .btn--whatsapp:hover {
-    background: #1da851;
-    border-color: #1da851;
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
     transform: translateY(-2px);
     color: white;
 }
@@ -303,7 +303,6 @@ a:hover {
     background: rgba(10, 10, 10, 0.95);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    padding: 8px 0;
     border-bottom: 1px solid var(--border-subtle);
     box-shadow: var(--shadow-md);
 }
@@ -345,15 +344,15 @@ a:hover {
 }
 
 .header--scrolled .header__logo-img {
-    height: 32px;
+    height: 40px;
 }
 
 .header--scrolled .header__logo-text {
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 .header--scrolled .header__logo-sc {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .header__nav {
@@ -1447,7 +1446,7 @@ a:hover {
 }
 
 .footer__contact li:last-child svg {
-    color: #25D366;
+    color: var(--primary);
 }
 
 .footer__contact a {
@@ -1489,12 +1488,12 @@ a:hover {
     right: 28px;
     width: 60px;
     height: 60px;
-    background: #25D366;
+    background: var(--primary);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    box-shadow: 0 4px 20px rgba(245, 124, 32, 0.4);
     z-index: 999;
     transition: all var(--transition-fast);
     animation: fadeInUp 1s ease 2s both;
@@ -1502,7 +1501,7 @@ a:hover {
 
 .whatsapp-float:hover {
     transform: scale(1.1) translateY(-2px);
-    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.5);
+    box-shadow: 0 6px 30px rgba(245, 124, 32, 0.5);
 }
 
 .whatsapp-float svg {
