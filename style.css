@@ -1823,21 +1823,49 @@ a:hover {
     }
 
     .pricing-card__item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-        padding: 16px 20px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 14px 16px;
+    }
+
+    .pricing-card__item-info {
+        gap: 10px;
+        flex: 1;
+        min-width: 0;
+    }
+
+    .pricing-card__item-info div {
+        min-width: 0;
+    }
+
+    .pricing-card__item-info strong {
+        font-size: 0.85rem;
+        white-space: normal;
+        word-break: break-word;
+    }
+
+    .pricing-card__item-info span {
+        font-size: 0.75rem;
+        white-space: normal;
+    }
+
+    .pricing-card__price {
+        font-size: 1.1rem;
+        flex-shrink: 0;
+        text-align: right;
     }
 
     .pricing-card__header {
         flex-direction: column;
         align-items: flex-start;
         gap: 8px;
-        padding: 20px;
+        padding: 16px;
     }
 
-    .pricing-card__item-info {
-        gap: 12px;
+    .pricing-card__title {
+        font-size: 1.1rem;
     }
 
     .uvv-price-card__amount {
