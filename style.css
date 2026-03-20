@@ -1729,6 +1729,7 @@ a:hover {
 
     .header__nav-list > li {
         border-bottom: 1px solid rgba(255,255,255,0.07);
+        padding: 0;
     }
 
     .header__nav-link {
