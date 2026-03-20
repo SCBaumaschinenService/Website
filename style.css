@@ -873,7 +873,7 @@ a:hover {
 
 /* ── Mobile Pricing Tiles (card layout for small screens) ── */
 @media (max-width: 600px) {
-    .pricing-card__list {
+    .pricing-card--tiles .pricing-card__list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
@@ -882,7 +882,7 @@ a:hover {
         margin: 0;
     }
 
-    .pricing-card__item {
+    .pricing-card--tiles .pricing-card__item {
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -890,36 +890,46 @@ a:hover {
         border: 1px solid var(--border-subtle);
         border-radius: 12px;
         padding: 16px 8px 14px;
+        min-height: 130px;
+        justify-content: center;
     }
 
-    .pricing-card__item-info {
+    .pricing-card--tiles .pricing-card__item-info {
         flex-direction: column;
         align-items: center;
         gap: 6px;
     }
 
-    .pricing-card__item-info div {
+    .pricing-card--tiles .pricing-card__item-info div {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .pricing-card__item-info div strong {
+    .pricing-card--tiles .pricing-card__item-info div strong {
         font-size: 0.85rem;
         text-align: center;
     }
 
-    .pricing-card__item-info div span {
+    .pricing-card--tiles .pricing-card__item-info div span {
         font-size: 0.72rem;
         text-align: center;
         color: var(--text-secondary);
     }
 
-    .pricing-card__item-icon {
+    .pricing-card--tiles .pricing-card__item-icon {
         width: 32px;
         height: 32px;
         margin-bottom: 4px;
     }
+
+    .pricing-card--tiles .pricing-card__price {
+        margin-top: 8px;
+        font-size: 1rem;
+    }
+}
+
+
 
     .pricing-card__price {
         margin-top: 8px;
