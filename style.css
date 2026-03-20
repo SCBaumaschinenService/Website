@@ -1447,6 +1447,10 @@ a:hover {
     flex-shrink: 0;
 }
 
+.footer__contact li:last-child svg {
+    color: #25D366;
+}
+
 .footer__contact a {
     color: var(--text-muted);
 }
