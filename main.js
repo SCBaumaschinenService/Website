@@ -36,7 +36,7 @@ function initHeader() {
 function initMobileMenu() {
     const burger = document.getElementById('burger');
     const nav = document.getElementById('nav');
-    const navLinks = nav.querySelectorAll('.header__nav-link');
+    const navLinks = nav.querySelectorAll('.header__nav-link, .header__nav-cta-mobile .btn');
 
     burger.addEventListener('click', () => {
         burger.classList.toggle('header__burger--active');
