@@ -1361,26 +1361,39 @@ a:hover {
 
 .contact-form__success {
     display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 40px;
+    padding: 48px 32px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
     animation: fadeInUp 0.5s ease;
+    gap: 16px;
+    min-height: 260px;
 }
 
 .contact-form__success svg {
-    width: 48px;
-    height: 48px;
+    width: 56px;
+    height: 56px;
     color: #25D366;
-    margin-bottom: 16px;
+    flex-shrink: 0;
 }
 
 .contact-form__success strong {
     display: block;
-    font-size: 1.3rem;
-    margin-bottom: 8px;
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-primary);
 }
 
 .contact-form__success p {
     color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 320px;
 }
 
 .contact-form--success>*:not(.contact-form__success) {
@@ -1388,7 +1401,7 @@ a:hover {
 }
 
 .contact-form--success .contact-form__success {
-    display: block;
+    display: flex;
 }
 
 /* Contact Info Sidebar */
