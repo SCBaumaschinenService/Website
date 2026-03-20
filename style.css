@@ -1779,6 +1779,8 @@ a:hover {
         padding: 16px 24px;
         border-radius: var(--radius-md);
         box-sizing: border-box;
+        margin-top: 8px;
+        margin-bottom: 8px;
     }
 
     .header__burger {
