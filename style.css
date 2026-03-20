@@ -1764,7 +1764,7 @@ a:hover {
     .header__nav-cta-mobile {
         display: block;
         border-bottom: none;
-        padding: 20px 24px 24px;
+        padding: 24px 32px 28px;
         background: rgba(15, 15, 15, 0.6);
         border-top: 1px solid rgba(255,255,255,0.07);
         list-style: none;
