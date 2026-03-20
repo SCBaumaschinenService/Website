@@ -907,6 +907,9 @@ a:hover {
     transition: all var(--transition-med);
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .usp-card:hover {
