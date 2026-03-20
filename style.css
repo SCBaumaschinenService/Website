@@ -890,8 +890,9 @@ a:hover {
         border: 1px solid var(--border-subtle);
         border-radius: 12px;
         padding: 16px 8px 14px;
-        min-height: 130px;
-        justify-content: center;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
     }
 
     .pricing-card--tiles .pricing-card__item-info {
@@ -924,16 +925,25 @@ a:hover {
     }
 
     .pricing-card--tiles .pricing-card__price {
-        margin-top: 8px;
+        margin-top: auto;
+        padding-top: 8px;
         font-size: 1rem;
     }
-}
 
+    .pricing-cta {
+        background: var(--bg-card);
+        border: 2px solid var(--primary);
+        border-radius: var(--radius-lg);
+        padding: 28px 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
 
-
-    .pricing-card__price {
-        margin-top: 8px;
-        font-size: 1rem;
+    .pricing-cta .btn {
+        width: 100%;
     }
 }
 
