@@ -284,13 +284,13 @@ function initFileDrop() {
         const files = e.dataTransfer.files;
         if (files.length > 0) {
             fileInput.files = files;
-            label.innerHTML = `<strong>${files[0].name}</strong> ausgewählt`;
+            label.textContent = files[0].name + ' ausgewählt';
         }
     });
 
     fileInput.addEventListener('change', () => {
         if (fileInput.files.length > 0) {
-            label.innerHTML = `<strong>${fileInput.files[0].name}</strong> ausgewählt`;
+            label.textContent = fileInput.files[0].name + ' ausgewählt';
         }
     });
 }

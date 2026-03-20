@@ -72,6 +72,7 @@ html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }
 
 body {
@@ -1926,6 +1927,62 @@ a:hover {
 
     .contact-form__title {
         font-size: 1.4rem;
+    }
+}
+
+/* Smallest mobile (320px) */
+@media (max-width: 320px) {
+    .hero__title {
+        font-size: 1.2rem;
+    }
+
+    .hero__subtitle {
+        font-size: 0.8rem;
+    }
+
+    .hero__logo {
+        width: 160px;
+    }
+
+    .section__title {
+        font-size: 1.25rem;
+    }
+
+    .btn--lg {
+        padding: 12px 20px;
+        font-size: 0.85rem;
+    }
+
+    .uvv-price-card__amount {
+        font-size: 2rem;
+    }
+
+    .contact-form {
+        padding: 20px 12px;
+    }
+
+    .stats-bar {
+        padding: 16px 8px;
+    }
+}
+
+/* Touch target accessibility */
+@media (pointer: coarse) {
+    .header__nav-link,
+    .footer__links a,
+    .form-checkbox,
+    .btn {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .header__burger {
+        min-width: 44px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
