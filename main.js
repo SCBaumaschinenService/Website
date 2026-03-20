@@ -219,30 +219,39 @@ function animateCounter(element) {
     requestAnimationFrame(update);
 }
 
-/* ── Contact Form ──────────────────────────────────────────── */
+/* ── Contact Form (Formspree) ──────────────────────────────── */
 function initContactForm() {
-    const form = document.getElementById('contact-form');
-    const submitBtn = document.getElementById('submit-btn');
+    const contactForm = document.getElementById('contact-form');
+    if (!contactForm) return;
 
-    form.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
+        const submitBtn = document.getElementById('submit-btn');
+        const formSuccess = document.getElementById('form-success');
 
-        // Add loading state
         submitBtn.classList.add('btn--loading');
         submitBtn.disabled = true;
 
-        // Simulate form submission (replace with actual backend)
-        setTimeout(() => {
+        const formData = new FormData(contactForm);
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                contactForm.style.display = 'none';
+                formSuccess.style.display = 'flex';
+            } else {
+                throw new Error('Server error');
+            }
+        } catch (err) {
             submitBtn.classList.remove('btn--loading');
             submitBtn.disabled = false;
-            form.classList.add('contact-form--success');
-
-            // Reset after 5 seconds
-            setTimeout(() => {
-                form.classList.remove('contact-form--success');
-                form.reset();
-            }, 5000);
-        }, 1500);
+            alert('Fehler beim Senden. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt per Telefon.');
+        }
     });
 }
 
