@@ -939,7 +939,7 @@ a:hover {
 @media (max-width: 600px) {
     .pricing-cta {
         background: var(--bg-card);
-        border: 2px solid var(--primary) !important;
+        border: 1px solid rgba(255,255,255,0.12) !important;
         border-radius: var(--radius-lg);
         padding: 28px 20px;
         text-align: center;
