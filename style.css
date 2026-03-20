@@ -1824,9 +1824,8 @@ a:hover {
     }
 
     .uvv-benefits {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 12px;
     }
 
@@ -1838,6 +1837,7 @@ a:hover {
         justify-content: flex-start;
         padding: 16px 12px;
         gap: 8px;
+        min-height: 110px;
     }
 
     .uvv-benefit .uvv-benefit__icon {
