@@ -1700,21 +1700,25 @@ a:hover {
 @media (max-width: 768px) {
     .header__nav {
         position: fixed;
-        top: 0;
-        right: -100%;
-        width: 300px;
-        height: 100vh;
+        top: 72px; /* direkt unter dem Header */
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: auto;
+        max-height: 0;
+        overflow: hidden;
         background: rgba(10, 10, 10, 0.98);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
-        padding: 100px 40px 40px;
-        transition: right var(--transition-med);
-        border-left: 1px solid var(--border-subtle);
-        z-index: 1000;
+        padding: 0;
+        transition: max-height 0.35s ease, padding 0.35s ease;
+        border-bottom: 1px solid var(--border-subtle);
+        z-index: 999;
     }
 
     .header__nav--open {
-        right: 0;
+        max-height: 500px;
+        padding: 20px 24px 28px;
     }
 
     .header__nav-list {
@@ -1724,14 +1728,15 @@ a:hover {
 
     .header__nav-link {
         display: block;
-        font-size: 1.1rem;
-        padding: 16px 20px;
+        font-size: 1.05rem;
+        padding: 14px 16px;
         border-radius: var(--radius-sm);
+        text-align: center;
     }
 
     .header__nav-link--cta {
         text-align: center;
-        margin-top: 16px;
+        margin-top: 8px;
     }
 
     .header__burger {
