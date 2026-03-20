@@ -1806,6 +1806,92 @@ a:hover {
     }
 }
 
+/* iPhone Pro Max (430px) */
+@media (max-width: 430px) {
+    .form-input {
+        font-size: 16px; /* Prevents iOS auto-zoom on focus */
+    }
+
+    .btn {
+        min-height: 44px; /* Minimum touch target */
+    }
+
+    .btn--lg {
+        padding: 16px 28px;
+        font-size: 0.95rem;
+    }
+
+    .pricing-card__item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 16px 20px;
+    }
+
+    .pricing-card__header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 20px;
+    }
+
+    .pricing-card__item-info {
+        gap: 12px;
+    }
+
+    .uvv-price-card__amount {
+        font-size: 2.5rem;
+    }
+
+    .contact-form {
+        padding: 24px 16px;
+    }
+
+    .hero__title {
+        font-size: 1.5rem;
+    }
+
+    .hero__subtitle {
+        font-size: 0.9rem;
+    }
+}
+
+/* iPhone SE / iPhone 17 (390px) */
+@media (max-width: 390px) {
+    .hero__title {
+        font-size: 1.35rem;
+    }
+
+    .hero__subtitle {
+        font-size: 0.85rem;
+    }
+
+    .hero__logo {
+        width: clamp(180px, 60vw, 260px);
+    }
+
+    .section__title {
+        font-size: 1.4rem;
+    }
+
+    .btn--lg {
+        padding: 14px 24px;
+        font-size: 0.9rem;
+    }
+
+    .pricing-card__price {
+        font-size: 1.1rem;
+    }
+
+    .stats-bar {
+        padding: 20px 12px;
+    }
+
+    .stat__number {
+        font-size: 1.5rem;
+    }
+}
+
 /* Small mobile */
 @media (max-width: 480px) {
     .hero__title {

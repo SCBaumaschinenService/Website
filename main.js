@@ -234,6 +234,9 @@ function initContactForm() {
 
         const formData = new FormData(contactForm);
 
+        // Honeypot check
+        if (formData.get('_gotcha')) return; // Bot detected, silently ignore
+
         try {
             const response = await fetch(contactForm.action, {
                 method: 'POST',

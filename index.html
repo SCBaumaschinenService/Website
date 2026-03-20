@@ -11,6 +11,8 @@
         content="Baumaschinen Service, Baumaschinen Reparatur, UVV Prüfung, PKW Reparatur, Kleingeräte Reparatur, Baden-Württemberg, Mobiler Service, Wartung">
     <meta name="author" content="SC Baumaschinen Service - Salvatore Conigliaro">
     <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/favicon.svg">
     <link rel="canonical" href="https://sc-baumaschinen.de/">
 
     <!-- Open Graph -->
@@ -680,6 +682,8 @@
                 <div class="contact-layout">
                     <!-- TODO: Formspree Form-ID xpwzgkdo ist ein Platzhalter. Salva muss sich auf formspree.io registrieren und seine echte Form-ID hier einsetzen. -->
                     <form class="contact-form reveal" id="contact-form" action="https://formspree.io/f/xpwzgkdo" method="POST">
+                        <!-- Honeypot anti-spam field - hidden from humans -->
+                        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
                         <div class="contact-form__row">
                             <div class="form-group">
                                 <label for="name" class="form-label">Name *</label>
