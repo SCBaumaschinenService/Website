@@ -933,9 +933,13 @@ a:hover {
         flex-shrink: 0;
     }
 
+}
+
+/* pricing-cta Mobile Override – MUSS nach der allgemeinen .pricing-cta Regel stehen */
+@media (max-width: 600px) {
     .pricing-cta {
         background: var(--bg-card);
-        border: 2px solid var(--primary);
+        border: 2px solid var(--primary) !important;
         border-radius: var(--radius-lg);
         padding: 28px 20px;
         text-align: center;
@@ -1931,6 +1935,10 @@ a:hover {
 
 /* Pricing header fix for all mobile sizes */
 @media (max-width: 600px) {
+    .form-input {
+        font-size: 16px; /* Prevents iOS auto-zoom on focus */
+    }
+
     .pricing-card__header {
         flex-direction: column;
         align-items: center;
@@ -1952,10 +1960,6 @@ a:hover {
 
 /* iPhone Pro Max (430px) */
 @media (max-width: 430px) {
-    .form-input {
-        font-size: 16px; /* Prevents iOS auto-zoom on focus */
-    }
-
     .btn {
         min-height: 44px; /* Minimum touch target */
     }
@@ -2060,7 +2064,7 @@ a:hover {
     }
 
     .section__title {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 
     .stats-bar {

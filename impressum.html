@@ -9,6 +9,8 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="apple-touch-icon" href="assets/favicon.svg">
     <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="style.css">
     <style>
         .legal-page {
@@ -242,6 +244,22 @@
             document.getElementById('nav').classList.toggle('header__nav--open');
         });
     </script>
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookie-banner">
+        <div class="cookie-banner__content">
+            <div class="cookie-banner__text">
+                <strong>🍪 Cookie-Hinweis</strong>
+                <p>Wir verwenden Cookies, um Ihnen die bestmögliche Erfahrung auf unserer Website zu bieten. Weitere
+                    Informationen finden Sie in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+            </div>
+            <div class="cookie-banner__actions">
+                <button class="btn btn--sm btn--outline" id="cookie-settings">Nur notwendige</button>
+                <button class="btn btn--sm btn--primary" id="cookie-accept">Alle akzeptieren</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
 </body>
 
 </html>
