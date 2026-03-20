@@ -1722,18 +1722,25 @@ a:hover {
     }
 
     .header__nav-list {
-        flex-direction: column;
+        display: block;
+        flex-direction: unset;
         gap: 0;
         padding: 0;
+        margin: 0;
+        width: 100%;
     }
 
     .header__nav-list > li {
-        border-bottom: 1px solid rgba(255,255,255,0.07);
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
         padding: 0;
+        list-style: none;
     }
 
     .header__nav-link {
         display: block;
+        width: 100%;
         font-size: 0.85rem;
         font-weight: 600;
         padding: 18px 24px;
@@ -1742,6 +1749,7 @@ a:hover {
         color: rgba(255,255,255,0.75);
         letter-spacing: 0.12em;
         text-transform: uppercase;
+        box-sizing: border-box;
     }
 
     .header__nav-link:hover {
