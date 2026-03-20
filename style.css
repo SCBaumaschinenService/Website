@@ -1823,6 +1823,22 @@ a:hover {
         align-items: center;
     }
 
+    .uvv-benefits {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 1fr;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .uvv-benefit {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 16px 10px;
+    }
+
     .uvv-price-card {
         text-align: center;
     }
