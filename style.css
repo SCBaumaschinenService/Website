@@ -1700,7 +1700,7 @@ a:hover {
 @media (max-width: 768px) {
     .header__nav {
         position: fixed;
-        top: 72px; /* direkt unter dem Header */
+        top: 72px;
         left: 0;
         right: 0;
         width: 100%;
@@ -1711,32 +1711,58 @@ a:hover {
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         padding: 0;
-        transition: max-height 0.35s ease, padding 0.35s ease;
+        transition: max-height 0.35s ease;
         border-bottom: 1px solid var(--border-subtle);
         z-index: 999;
     }
 
     .header__nav--open {
         max-height: 500px;
-        padding: 20px 24px 28px;
     }
 
     .header__nav-list {
         flex-direction: column;
-        gap: 4px;
+        gap: 0;
+        padding: 8px 0 0;
+    }
+
+    .header__nav-list > li {
+        border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
     .header__nav-link {
         display: block;
-        font-size: 1.05rem;
-        padding: 14px 16px;
-        border-radius: var(--radius-sm);
-        text-align: center;
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 16px 24px;
+        border-radius: 0;
+        text-align: left;
+        color: var(--text-primary);
+        letter-spacing: 0;
+    }
+
+    .header__nav-link:hover {
+        background: rgba(255,255,255,0.05);
+        color: var(--primary);
     }
 
     .header__nav-link--cta {
-        text-align: center;
-        margin-top: 8px;
+        display: none; /* wird durch header__nav-cta-mobile ersetzt */
+    }
+
+    .header__nav-cta-mobile {
+        display: block;
+        border-bottom: none;
+        padding: 20px 24px 24px;
+        background: rgba(245, 124, 32, 0.06);
+        border-top: 1px solid rgba(245, 124, 32, 0.2);
+    }
+
+    .header__nav-cta-mobile .btn {
+        width: 100%;
+        justify-content: center;
+        font-size: 1rem;
+        padding: 14px 24px;
     }
 
     .header__burger {
@@ -1745,10 +1771,6 @@ a:hover {
 
     .header__cta {
         display: none;
-    }
-
-    .header__nav-cta-mobile {
-        display: list-item;
     }
 
     .hero {
