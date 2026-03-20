@@ -1712,12 +1712,13 @@ a:hover {
         -webkit-backdrop-filter: blur(20px);
         padding: 0;
         transition: max-height 0.35s ease;
-        border-bottom: 1px solid var(--border-subtle);
+        border-bottom: none;
         z-index: 999;
     }
 
     .header__nav--open {
         max-height: 500px;
+        border-bottom: 1px solid var(--border-subtle);
     }
 
     .header__nav-list {
