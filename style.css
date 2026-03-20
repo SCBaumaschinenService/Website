@@ -1807,6 +1807,26 @@ a:hover {
     }
 }
 
+/* Pricing header fix for all mobile sizes */
+@media (max-width: 600px) {
+    .pricing-card__header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 16px;
+    }
+
+    .pricing-card__title {
+        font-size: 1.1rem;
+    }
+
+    .pricing-card__badge {
+        font-size: 0.7rem;
+        padding: 4px 10px;
+        white-space: nowrap;
+    }
+}
+
 /* iPhone Pro Max (430px) */
 @media (max-width: 430px) {
     .form-input {
@@ -1855,17 +1875,6 @@ a:hover {
         font-size: 1.1rem;
         flex-shrink: 0;
         text-align: right;
-    }
-
-    .pricing-card__header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-        padding: 16px;
-    }
-
-    .pricing-card__title {
-        font-size: 1.1rem;
     }
 
     .uvv-price-card__amount {
