@@ -315,6 +315,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 
 .header__logo {
@@ -357,7 +358,9 @@ a:hover {
 }
 
 .header__nav {
-    flex: 1;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
 }
