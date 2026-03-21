@@ -5,9 +5,9 @@
 /* ── CSS Custom Properties ─────────────────────────────────── */
 :root {
     /* Primary Colors (Orange from Logo) */
-    --primary: #F57C20;
-    --primary-dark: #D4690E;
-    --primary-light: #FF9A3C;
+    --primary: #E02020;
+    --primary-dark: #B01010;
+    --primary-light: #FF4444;
     --primary-glow: rgba(245, 124, 32, 0.4);
     --primary-subtle: rgba(245, 124, 32, 0.08);
 
