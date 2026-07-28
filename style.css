@@ -723,6 +723,16 @@ a:hover {
     display: inline-block;
 }
 
+.service-card__price-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.service-card__price-row .service-card__price {
+    white-space: nowrap;
+}
+
 /* ═══════════════════════════════════════════════════════════════
    PRICING
    ═══════════════════════════════════════════════════════════════ */
@@ -932,6 +942,11 @@ a:hover {
         padding-top: 8px;
         font-size: 1rem;
         flex-shrink: 0;
+    }
+
+    /* Letzte Kachel bei ungerader Anzahl über beide Spalten */
+    .pricing-card--tiles .pricing-card__item:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
     }
 
 }
@@ -1923,6 +1938,10 @@ a:hover {
 
     .service-card__price {
         display: inline-block;
+    }
+
+    .service-card__price-row {
+        justify-content: center;
     }
 
     .services-grid {
